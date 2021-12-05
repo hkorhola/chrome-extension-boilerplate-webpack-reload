@@ -1415,7 +1415,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-// Initialize butotn with users's prefered color
+// Initialize button with users's prefered color
 var changeColor = document.getElementById("changeColor");
 chrome.storage.sync.get("color", function (_ref) {
   var color = _ref.color;
@@ -1429,13 +1429,14 @@ changeColor.addEventListener("click", /*#__PURE__*/_asyncToGenerator( /*#__PURE_
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          _context.next = 2;
+          _context.prev = 0;
+          _context.next = 3;
           return chrome.tabs.query({
             active: true,
             currentWindow: true
           });
 
-        case 2:
+        case 3:
           _yield$chrome$tabs$qu = _context.sent;
           _yield$chrome$tabs$qu2 = _slicedToArray(_yield$chrome$tabs$qu, 1);
           tab = _yield$chrome$tabs$qu2[0];
@@ -1445,14 +1446,21 @@ changeColor.addEventListener("click", /*#__PURE__*/_asyncToGenerator( /*#__PURE_
             },
             function: setPageBackgroundColor
           });
+          _context.next = 12;
+          break;
 
-        case 6:
+        case 9:
+          _context.prev = 9;
+          _context.t0 = _context["catch"](0);
+          console.log(_context.t0);
+
+        case 12:
         case "end":
           return _context.stop();
       }
     }
-  }, _callee);
-}))); // The body of this function will be execuetd as a content script inside the
+  }, _callee, null, [[0, 9]]);
+}))); // The body of this function will be executed as a content script inside the
 // current page
 
 function setPageBackgroundColor() {
@@ -7046,7 +7054,7 @@ try {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("fe5f12f633379cfbc4f0")
+/******/ 		__webpack_require__.h = () => ("67bc75b3d481bf4c2120")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

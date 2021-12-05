@@ -11,7 +11,9 @@ module.exports = {
   entry: {
     options: './options/options.js',
     popup: './popup/popup.js',
-    background: './background/background.js',
+    //background moved to copy section because hot extension reloader pluging doesn't work with bundled code that refers to window object
+    //see more https://github.com/rubenspgcavalcante/webpack-extension-reloader/issues/125
+    //background: './background.js',     
     contentScripts: './contentScripts/content-script.js',
   },
   output: {
@@ -44,6 +46,7 @@ module.exports = {
         { from: 'assets', to: 'assets' },
         { from: 'styles', to: 'styles' },
         { from: 'manifest.json', to: 'manifest.json' },
+        { from: 'background/background.js', to: 'background.js' },
       ],
     }),
     new HtmlWebpackPlugin({
