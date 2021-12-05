@@ -16,6 +16,6 @@ This Chrome extension boilerplate is with webpack and hot reload. It is a simple
 9. Run `npm run dev` that loads webpack and hot reloading is enabled
 10. Start developing
 
-Note that unfortunately the background.js service worker is not hot reloaded, it is in copy webpack section. If you change service worker code, you need to reload the extension from [Chrome extensions](chrome://extensions) by clicking reload.
+Note that unfortunately the background.js service worker is not hot reloaded, it is in copy webpack section. If you change service worker code, you need to reload the extension from chrome://extensions and by clicking reload.
 
-Note that the distribution of the extension to Chrome marketplace is not in scope of this project. You need to create a zip file from the package. See more (Publish to Chrome store)[https://developer.chrome.com/docs/webstore/publish/]
+Note that the distribution of the extension to Chrome marketplace is not in scope of this project. You need to create a zip file from the package. See more [Publish to Chrome store ](https://developer.chrome.com/docs/webstore/publish/)
